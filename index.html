@@ -10,27 +10,87 @@
     <link href="https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/vendors/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="assets/css/live-resume.css">
+    <link rel="stylesheet" href="assets/vendors/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/live-resume.css">
 </head>
 
+
+    
+
 <body>
-    <header>
+  
+            <label class="theme-switch">
+                <input type="checkbox" class="theme-switch__checkbox" style="position: absolute; right: 0; top: 10px;">
+                <div class="theme-switch__container">
+                <div class="theme-switch__clouds"></div>
+                <div class="theme-switch__stars-container">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="..." fill="currentColor"></path>
+                  </svg>
+                </div>
+                <div class="theme-switch__circle-container">
+                  <div class="theme-switch__sun-moon-container">
+                    <div class="theme-switch__moon">
+                      <div class="theme-switch__spot"></div>
+                      <div class="theme-switch__spot"></div>
+                      <div class="theme-switch__spot"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </label>
+     
+    
+            <br>
+            <br>
+
+   
+      
+   
+    <script>
+  
+      // Select the theme switch checkbox
+const themeSwitch = document.querySelector('.theme-switch__checkbox');
+
+// Set the default theme to dark if no saved theme exists
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+
+// Sync the toggle button's state with the theme
+// Flip the condition: checkbox is checked for "dark", unchecked for "light"
+themeSwitch.checked = savedTheme === 'dark';
+
+// Listen for changes to the toggle switch
+themeSwitch.addEventListener('change', () => {
+  const theme = themeSwitch.checked ? 'dark' : 'light'; // Match checkbox state
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme); // Save the user's preference
+});
+
+        
+          </script>
+    <!-- <header>
+
+
         <div class="  ml-auto mr-3 ml-md-0 mr-md-auto">
         </div>
         <nav class="collapsible-nav" id="collapsible-nav">
 
 
             <a href="/" class="nav-link active">RESUME</a>
-            <!-- <a href="resume.html" class="nav-link "></a> -->
-            <a href="/portfolio" class="nav-link ">PORTFOLIO</a>
+            <a href="/portfolio/index.html" class="nav-link ">PORTFOLIO</a>
      
         </nav>
         <button class="btn btn-menu-toggle btn-white rounded-circle" data-toggle="collapsible-nav"
             data-target="collapsible-nav"><img src="assets/images/hamburger.svg" alt="hamburger"></button>
+            data-target="collapsible-nav"><img src="assets/images/hamburger.svg" alt="hamburger"></button>
 
-    </header>
+    </header> -->
     <div class="content-wrapper">
+        
         <aside>
             <div class="profile-img-wrapper">
+                <img src="assets/images/profile_pic_mini.jpg" alt="profile">
                 <img src="assets/images/profile_pic_mini.jpg" alt="profile">
             </div>
             <h1 class="profile-name">Mishari Al-buhairi</h1>
@@ -40,7 +100,7 @@
 
 
                 <div class="text-center" style="text-align: center;">
-                    <span class="badge badge-white badge-pill profile-designation" style="display: inline-flex; align-items: center; padding: 10px 20px; border-radius: 50px; background-color: #fff; border: 1px solid #ccc;">
+                    <span class="badge badge-white badge-pill profile-designation" style="display: inline-flex; align-items: center; padding: 10px 20px; border-radius: 50px; ">
                         <!-- Pulsing Dot -->
                         <div id="holder" style="margin-right: 10px; position: relative; width: 15px; height: 12px;">
                             <div style="width: 10px; height: 10px; border: 5px solid #11ba11; border-radius: 30px; background-color: #00FF00; z-index: 10; position: absolute; left: 0px; top: 0px;"></div>
@@ -107,7 +167,7 @@
                             <p><strong>Date of Birth:</strong> 2003/09/04</p>
                             <p><strong>PHONE:</strong><br>
                                  +966 500585061</p>
-                            <p><strong>MAIL:</strong><br> misharialbuhari@gmail.com</p>
+                            <p><strong>MAIL:</strong><br> mishari@albuhairi.me</p>
                             <p><strong>Location:</strong><br> Riyadh, Saudi Arabia</p>
                         </div>
                     </div>
@@ -117,7 +177,9 @@
             
             <div>
                 <a href="assets/resume/Mishari-resume.pdf" download="Mishari-resume.pdf">
+                <a href="assets/resume/Mishari-resume.pdf" download="Mishari-resume.pdf">
                     <button class="btn btn-download-cv btn-primary rounded-pill">
+                        <img src="assets/images/download.svg" alt="download" class="btn-img">DOWNLOAD CV</button>
                         <img src="assets/images/download.svg" alt="download" class="btn-img">DOWNLOAD CV</button>
                 </a>
             </div>
@@ -189,17 +251,21 @@
 
                     <div class="client-logo">
                         <img src="assets/images/python_icon.png" alt="logo" style="width: auto; height: auto;">
+                        <img src="assets/images/python_icon.png" alt="logo" style="width: auto; height: auto;">
                     </div>
 
                     <div class="client-logo">
+                        <img src="assets/images/flask_icon.png" alt="logo" style="width: auto; height: auto;">
                         <img src="assets/images/flask_icon.png" alt="logo" style="width: auto; height: auto;">
                     </div>
 
                     <div class="client-logo">
                         <img src="assets/images/fastapi_icon.png" alt="logo" style="width: auto; height: auto;">
+                        <img src="assets/images/fastapi_icon.png" alt="logo" style="width: auto; height: auto;">
                     </div>
 
                     <div class="client-logo">
+                        <img src="assets/images/Bootstrap_icon.png" alt="logo" style="width: auto; height: auto;">
                         <img src="assets/images/Bootstrap_icon.png" alt="logo" style="width: auto; height: auto;">
                     </div>
 
@@ -213,6 +279,7 @@
                     <div class="media service-card col-lg-6">
                         <div class="service-icon">
                             <img src="assets/images/web-design.png" width="24px" alt="target">
+                            <img src="assets/images/web-design.png" width="24px" alt="target">
                         </div>
                         <div class="media-body">
                             <h5 class="service-title">web Development</h5>
@@ -222,6 +289,7 @@
                     </div>
                     <div class="media service-card col-lg-6">
                         <div class="service-icon">
+                            <img src="assets/images/microchip-ai.png" width="24px" alt="bulb"> 
                             <img src="assets/images/microchip-ai.png" width="24px" alt="bulb"> 
                         </div>
                         <div class="media-body">
@@ -234,6 +302,7 @@
                     <div class="media service-card col-lg-6">
                         <div class="service-icon">
                             <img src="assets/images/002-development.svg" alt="development">
+                            <img src="assets/images/002-development.svg" alt="development">
                         </div>
                         <div class="media-body">
                             <h5 class="service-title"> Programming Languages </h5>
@@ -244,6 +313,7 @@
                     </div>
                     <div class="media service-card col-lg-6">
                         <div class="service-icon">
+                            <img src="assets/images/square-terminal.png" width="24px">
                             <img src="assets/images/square-terminal.png" width="24px">
                         </div>
                         <div class="media-body">
@@ -292,6 +362,50 @@
             </section>
        
         <!-- </div> -->
+        <section class="portfolio-section">
+
+        <h6 class="section-subtitle">WHAT I DID</h6> 
+        <h2 class="section-title">Portfolio</h2>
+        <div class="portfolio-wrapper">
+                    
+            <a class="portfolio-item hover-box" href="https://unibag.ngrok.io">
+                <img src="assets/images/unibag.png" alt="project" class="portfolio-item-img">
+                <figcaption class="portfolio-item-details  overlay">
+                    <h5 class="portfolio-item-title">UNIBAG</h5>
+                    <p class="portfolio-item-description">AI-powered platform that streamlines your study process by organizing your materials, generating practice questions, and tracking your progress, And much more.</p>
+                </figcaption>
+            </a>
+            
+            <a class="portfolio-item hover-box" href="https://eduthon.sa">
+                <img src="assets/images/eduthon_index.jpg" alt="project" class="portfolio-item-img">
+                <figcaption class="portfolio-item-details overlay">
+                    <h5 class="portfolio-item-title">EduThon Website</h5>
+                    <p class="portfolio-item-description">Eduthon website where people can register and join and create teams for the contest and communicate together.</p>
+                </figcaption>
+            </a>
+
+            <a class="portfolio-item hover-box" href="nabesh.xyz">
+                <img src="assets/images/nabesh_ui.jpg" alt="project" class="portfolio-item-img">
+                <figcaption class="portfolio-item-details overlay">
+                    <h5 class="portfolio-item-title">Nabesh game</h5>
+                    <p class="portfolio-item-description">Arabic word Similarity game AI-powered ranking system similar to Contexto by NYtimes</p>
+                </figcaption>
+            </a>
+
+            <a class="portfolio-item hover-box">
+                <img src="assets/images/task_app.jpg" alt="project" class="portfolio-item-img">
+                <figcaption class="portfolio-item-details overlay">
+                    <h5 class="portfolio-item-title">Task managment</h5>
+                    <p class="portfolio-item-description">a Task managment app similar to Trello and was there to acomdate the need to manages tasks for cyber security club in King saud University insted of paid apps like trello</p>
+                </figcaption>
+            </a>
+
+          
+        </section>
+    </section>
+</main>
+</div>
+
     </div>
         
         </main>
@@ -300,6 +414,7 @@
     <script src="assets/vendors/@popperjs/core/dist/umd/popper-base.min.js"></script>
     <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="assets/js/live-resume.js"></script>
+    <script src="assets/vendors/entry/jq.entry.min.js"></script>
 </body>
 
 </html>
